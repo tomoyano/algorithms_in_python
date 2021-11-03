@@ -34,7 +34,9 @@ def search_by_hash(keeper: List[int], target: int) -> Optional[int]:
             return index
 
         if keeper[index] == 0:
-            # ここに来るということは
+            # 探している値がリスト内にある場合、最初のハッシュ値から探していき見つかるまでに
+            # 0 は含まれない(格納時に衝突が発生した場合は隣の値に入れる動作をするため)。
+            # このため、0 が取得された場合は探している値は格納されていないと判断できる。
             print(f'Target value not exist in list. target: {target}')
             return None
 

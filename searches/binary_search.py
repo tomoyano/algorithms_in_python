@@ -25,7 +25,7 @@ def binary_search(search_list: List[int], target: int):
 
     head = 0
     tail = len(search_list) - 1
-    return  __binary_search(search_list, target, head, tail)
+    return __binary_search(search_list, target, head, tail)
 
 
 if __name__ == '__main__':
@@ -37,4 +37,4 @@ if __name__ == '__main__':
     if target_index:
         print(f'target_index: {target_index}')
     else:
-        print(f'Target not exist.')
+        print('Target not exist.')

@@ -5,6 +5,7 @@
 """
 from typing import List, Optional
 
+
 def linear_search(search_list: List[int], target: int) -> Optional[int]:
     """線形探索
 
@@ -14,14 +15,14 @@ def linear_search(search_list: List[int], target: int) -> Optional[int]:
     Args:
         search_list: 探索を行う整数の配列
         target: 探すべき整数
-    
+
     Returns:
         ターゲットの整数があればインデックスの番号
     """
     for i, num in enumerate(search_list):
         if num == target:
             return i
-    
+
     return None  # ターゲットがない場合は None を返すことを明示しておく
 
 
@@ -32,4 +33,5 @@ if __name__ == '__main__':
     index: Optional[int] = linear_search(search_list, target)
 
     if index:
-        print(f'target: {target}, index: {index}, num_in_list: {search_list[index]}')
+        print(
+            f'target: {target}, index: {index}, num_in_list: {search_list[index]}')
