@@ -8,7 +8,6 @@ def bubble_sort(target: List[int]):
     target_index: int = 0
 
     for _ in range(l):
-        print(f'target_index: {target_index}')
         if target_index > l - 2:
             break
 
@@ -16,14 +15,11 @@ def bubble_sort(target: List[int]):
             if l - 1 - j == target_index:
                 break
 
-            print(f'j: {j}')
             if target[l - 1 - j] < target[l - 2 - j]:
-                print(target[l - 1 - j], target[l - 2 - j])
                 t: int = target[l - 2 - j]
                 target[l - 2 - j] = target[l - 1 - j]
                 target[l - 1 - j] = t
 
-        print(target)
         target_index += 1
 
 
